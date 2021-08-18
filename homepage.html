@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- =====BOX ICONS===== -->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="css/homepage.css">
+
+    <title>Janaina Santiago | Home</title>
+</head>
+
+<body>
+    <header class="header">
+        <a href="#" class="header__logo">Jhon Doe</a>
+
+        <ion-icon name="menu-outline" class="header__toggle" id="nav-toggle"></ion-icon>
+
+        <nav class="nav" id="nav-menu">
+            <div class="nav__content bd-grid">
+
+                <ion-icon name="close-outline" class="nav__close" id="nav-close"></ion-icon>
+
+                <div class="nav__perfil">
+                    <div class="nav__img">
+                        <img src="img/homepage/perfil.png" alt="">
+                    </div>
+
+                    <div>
+                        <a href="#" class="nav__name">Jhon Doe</a>
+                        <span class="nav__profesion">Web designer</span>
+                    </div>
+                </div>
+
+                <div class="nav__menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="homepage.html" class="nav__link active">Home</a></li>
+                        <li class="nav__item"><a href="ajuda.html" class="nav__link">Ajuda</a></li>
+                        <li class="nav__item"><a href="src/servico/view/servicos.html" class="nav__link">Serviços</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">Agenda</a></li>
+
+                    </ul>
+                </div>
+
+                <div class="nav__social">
+                    <a href="https://api.whatsapp.com/send?phone=5512992095454&text=Ol%C3%A1%2C%20tudo%20bem%3F%20Gostaria%20de%20obter%20mais%20informa%C3%A7%C3%B5es" class="nav__social-icon">
+                        <i class='bx bxl-whatsapp'></i>
+                    </a>
+                    <a href="https://www.facebook.com/drajanainasantiago/" class="nav__social-icon">
+                        <i class='bx bxl-facebook'></i>
+                    </a>
+                    <a href="https://www.instagram.com/drajanainasantiago/" class="nav__social-icon">
+                        <i class='bx bxl-instagram'></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="slider__warpper">
+        <div class="flex__container flex--pikachu flex--active" data-slide="1">
+            <div class="flex__item flex__item--left">
+                <div class="flex__content">
+                    <p class="text--sub">Janaina Santiago</p>
+                    <h1 class="text--big">Bem-vindo!</h1>
+                    <p class="text--normal">Seja bem-vindo! Aqui neste site é possivel que você faça o seu agendamento sem sair de casa, de uma forma, rápida e tranquila.</p>
+                </div>
+                <p class="text__background">Welcome</p>
+            </div>
+            <div class="flex__item flex__item--right"></div>
+            <section class="clock container">
+                <div class="clock__container grid">
+                    <div class="clock__content grid">
+                        <div class="clock__circle">
+                            <span class="clock__twelve"></span>
+                            <span class="clock__three"></span>
+                            <span class="clock__six"></span>
+                            <span class="clock__nine"></span>
+
+                            <div class="clock__rounder"></div>
+                            <div class="clock__hour" id="clock-hour"></div>
+                            <div class="clock__minutes" id="clock-minutes"></div>
+                            <div class="clock__seconds" id="clock-seconds"></div>
+
+                            <!-- Dark/light button -->
+                            <div class="clock__theme">
+                                <i class='bx bxs-moon' id="theme-button"></i>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="clock__text">
+                                <div class="clock__text-hour" id="text-hour"></div>
+                                <div class="clock__text-minutes" id="text-minutes"></div>
+                                <div class="clock__text-ampm" id="text-ampm"></div>
+                            </div>
+
+                            <div class="clock__date">
+                                <!-- <span id="date-day-week"></span> -->
+                                <span id="date-day"></span>
+                                <span id="date-month"></span>
+                                <span id="date-year"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#" target="_blank" class="clock__logo">Janaina Santiago</a>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <div class="slider__navi">
+        <a href="#" class="slide-nav active" data-slide="1"></a>
+        <a href="#" class="slide-nav" data-slide="2"></a>
+        <a href="#" class="slide-nav" data-slide="3"></a>
+        <a href="#" class="slide-nav" data-slide="4"></a>
+        <a href="#" class="slide-nav" data-slide="5"></a>
+    </div>
+
+
+    <!-- ===== IONICONS ===== -->
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+
+    <!--===== MAIN JS =====-->
+    <script src="libs/sweetAlert/dist/sweetalert2.js"></script>
+    <script src="libs/DataTables/datatables.js"></script>
+    <script src="js/homepage.js"></script>
+    <script src="js/relogio.js"></script>
+    <script src="js/load-link.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,727 @@
+                        /*===== GOOGLE FONTS =====*/
+                        
+                        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+                        /*===== VARIABLES CSS =====*/
+                        
+                         :root {
+                            --header-height: 3rem;
+                            /*===== Colores =====*/
+                            --first-color: #A3519B;
+                            --dark-color: #070D1F;
+                            --dark-color-alt: #282B3A;
+                            --white-color: #E6E7E9;
+                            /*===== Fuente y tipografia =====*/
+                            --body-font: 'Poppins', sans-serif;
+                            --normal-font-size: .938rem;
+                            --small-font-size: .813rem;
+                            /*===== z index =====*/
+                            --z-fixed: 100;
+                        }
+                        
+                        @media screen and (min-width: 768px) {
+                             :root {
+                                --normal-font-size: 1rem;
+                                --small-font-size: .875rem;
+                            }
+                        }
+                        /*===== BASE =====*/
+                        
+                        *,
+                         ::before,
+                         ::after {
+                            -webkit-box-sizing: border-box;
+                            box-sizing: border-box;
+                        }
+                        
+                        body {
+                            margin: var(--header-height) 0 0 0;
+                            font-family: var(--body-font);
+                            font-size: var(--normal-font-size);
+                            font-weight: 500;
+                        }
+                        
+                        ul {
+                            margin: 0;
+                            padding: 0;
+                            list-style: none;
+                        }
+                        
+                        a {
+                            text-decoration: none;
+                        }
+                        
+                        img {
+                            max-width: 100%;
+                            height: auto;
+                        }
+                        
+                        .bd-grid {
+                            max-width: 1024px;
+                            display: -ms-grid;
+                            display: grid;
+                            -ms-grid-columns: 100%;
+                            grid-template-columns: 100%;
+                            margin-left: 1.5rem;
+                            margin-right: 1.5rem;
+                        }
+                        /*===== HEADER =====*/
+                        
+                        .header {
+                            width: 100%;
+                            height: var(--header-height);
+                            position: fixed;
+                            top: 0;
+                            left: 0;
+                            padding: 0 1.5rem;
+                            background-color: var(--dark-color);
+                            z-index: var(--z-fixed);
+                            display: -webkit-box;
+                            display: -ms-flexbox;
+                            display: flex;
+                            -webkit-box-pack: justify;
+                            -ms-flex-pack: justify;
+                            justify-content: space-between;
+                            -webkit-box-align: center;
+                            -ms-flex-align: center;
+                            align-items: center;
+                        }
+                        
+                        .header__logo {
+                            color: var(--white-color);
+                        }
+                        
+                        .header__toggle {
+                            font-size: 1.5rem;
+                            color: var(--white-color);
+                            cursor: pointer;
+                        }
+                        /*===== NAV =====*/
+                        
+                        @media screen and (max-width: 768px) {
+                            .nav {
+                                position: fixed;
+                                top: 0;
+                                left: -100%;
+                                background-color: var(--dark-color);
+                                color: var(--white-color);
+                                width: 100%;
+                                height: 100vh;
+                                padding: 1.5rem 0;
+                                z-index: var(--z-fixed);
+                                -webkit-transition: .5s;
+                                transition: .5s;
+                            }
+                        }
+                        
+                        .nav__content {
+                            height: 100%;
+                            -ms-grid-rows: max-content 1fr max-content;
+                            grid-template-rows: -webkit-max-content 1fr -webkit-max-content;
+                            grid-template-rows: max-content 1fr max-content;
+                            row-gap: 2rem;
+                        }
+                        
+                        .nav__close {
+                            position: absolute;
+                            right: 1.5rem;
+                            font-size: 1.3rem;
+                            padding: .25rem;
+                            background-color: var(--dark-color-alt);
+                            border-radius: 50%;
+                            cursor: pointer;
+                        }
+                        
+                        .nav__img {
+                            display: -webkit-box;
+                            display: -ms-flexbox;
+                            display: flex;
+                            -webkit-box-pack: center;
+                            -ms-flex-pack: center;
+                            justify-content: center;
+                            padding-top: .25rem;
+                            margin-bottom: .8rem;
+                            width: 56px;
+                            height: 56px;
+                            background-color: var(--first-color);
+                            border-radius: 50%;
+                            overflow: hidden;
+                        }
+                        
+                        .nav__img img {
+                            width: 46px;
+                        }
+                        
+                        .nav__name {
+                            display: block;
+                            color: var(--white-color);
+                        }
+                        
+                        .nav__profesion {
+                            font-size: var(--small-font-size);
+                        }
+                        
+                        .nav__menu {
+                            -ms-flex-item-align: center;
+                            -ms-grid-row-align: center;
+                            align-self: center;
+                        }
+                        
+                        .nav__item {
+                            margin: 2.5rem 0;
+                        }
+                        
+                        .nav__link {
+                            color: var(--white-color);
+                        }
+                        
+                        .nav__social {
+                            padding-top: .5rem;
+                        }
+                        
+                        .nav__social-icon {
+                            font-size: 1.2rem;
+                            color: var(--white-color);
+                            margin-right: 1rem;
+                        }
+                        
+                        .nav__social-icon:hover {
+                            color: var(--first-color);
+                        }
+                        /*Aparecer menu*/
+                        
+                        .show {
+                            left: 0;
+                        }
+                        /*Active menu*/
+                        
+                        .active {
+                            color: var(--first-color);
+                        }
+                        /*===== MEDIA QUERIES =====*/
+                        
+                        @media screen and (min-width: 768px) {
+                            body {
+                                margin: 0;
+                            }
+                            .header {
+                                height: calc(var(--header-height) + 1rem);
+                            }
+                            .header__logo,
+                            .header__toggle {
+                                display: none;
+                            }
+                            .nav {
+                                width: 100%;
+                            }
+                            .nav__content {
+                                -ms-grid-columns: (max-content);
+                                grid-template-columns: repeat(3, -webkit-max-content);
+                                grid-template-columns: repeat(3, max-content);
+                                -ms-grid-rows: 1fr;
+                                grid-template-rows: 1fr;
+                                -webkit-column-gap: 1rem;
+                                column-gap: 1rem;
+                                -webkit-box-pack: justify;
+                                -ms-flex-pack: justify;
+                                justify-content: space-between;
+                            }
+                            .nav__close,
+                            .nav__profesion {
+                                display: none;
+                            }
+                            .nav__perfil {
+                                display: -webkit-box;
+                                display: -ms-flexbox;
+                                display: flex;
+                                -webkit-box-align: center;
+                                -ms-flex-align: center;
+                                align-items: center;
+                            }
+                            .nav__img {
+                                width: 32px;
+                                height: 32px;
+                                margin-right: .5rem;
+                                margin-bottom: 0;
+                                -webkit-box-align: center;
+                                -ms-flex-align: center;
+                                align-items: center;
+                            }
+                            .nav__img img {
+                                width: 26px;
+                            }
+                            .nav__list {
+                                display: -webkit-box;
+                                display: -ms-flexbox;
+                                display: flex;
+                            }
+                            .nav__item {
+                                margin: 0 .25rem;
+                            }
+                            .nav__link {
+                                padding: .5rem .8rem;
+                                border-radius: .25rem;
+                            }
+                            .nav__link:hover {
+                                background-color: var(--first-color);
+                            }
+                            .active {
+                                background-color: var(--first-color);
+                                color: var(--white-color);
+                            }
+                            @media screen and (min-width: 1024px) {
+                                .bd-grid {
+                                    margin-left: auto;
+                                    margin-right: auto;
+                                }
+                            }
+                        }
+                        
+                        *,
+                        *:before,
+                        *:after {
+                            -webkit-box-sizing: border-box;
+                            -moz-box-sizing: border-box;
+                            box-sizing: border-box;
+                        }
+                        
+                        .slider__navi {
+                            position: absolute;
+                            top: 50%;
+                            right: 20px;
+                            transform: translateY(-50%);
+                            -webkit-transform: translateY(-50%);
+                            -moz-transform: translateY(-50%);
+                            -ms-transform: translateY(-50%);
+                            -o-transform: translateY(-50%);
+                            z-index: 999;
+                        }
+                        
+                        .slider__navi a {
+                            display: block;
+                            height: 6px;
+                            width: 20px;
+                            margin: 20px 0;
+                            text-indent: -9999px;
+                            box-shadow: none;
+                            border: none;
+                            background: rgba(0, 0, 0, 0.2);
+                        }
+                        
+                        .slider__navi a.active {
+                            background: rgba(255, 255, 255, 1);
+                        }
+                        
+                        body {
+                            position: relative;
+                            font-size: 100%;
+                            font-weight: 400;
+                            min-height: 100vh;
+                        }
+                        
+                        .flex__container {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            display: flex;
+                            display: -webkit-flex;
+                            display: -moz-flex;
+                            display: -ms-flex;
+                            -webkit-flex-flow: row wrap;
+                            -moz-flex-flow: row wrap;
+                            -ms-flex-flow: row wrap;
+                            -o-flex-flow: row wrap;
+                            flex-flow: row wrap;
+                            -webkit-justify-content: flex-start;
+                            -moz-justify-content: flex-start;
+                            -ms-justify-content: flex-start;
+                            -o-justify-content: flex-start;
+                            justify-content: flex-start;
+                            height: 100vh;
+                            width: 100%;
+                            z-index: 1;
+                        }
+                        
+                        .flex__container.flex--active {
+                            z-index: 2;
+                        }
+                        
+                        .text--sub {
+                            font-size: 12px;
+                            letter-spacing: 0.5rem;
+                            text-transform: uppercase;
+                            margin-bottom: 40px;
+                        }
+                        
+                        .text--big {
+                            font-family: 'Poppins', sans-serif;
+                            font-size: 7.5em;
+                            font-weight: 700;
+                            line-height: 110px;
+                            margin-left: -8px;
+                        }
+                        
+                        .text--normal {
+                            font-size: 13px;
+                            color: rgba(255, 255, 255, 0.8);
+                            line-height: 22px;
+                            margin-top: 25px;
+                        }
+                        
+                        .text__background {
+                            font-family: 'Poppins', sans-serif;
+                            position: absolute;
+                            left: 72px;
+                            bottom: -60px;
+                            color: rgba(0, 0, 0, 0.05);
+                            font-size: 170px;
+                            font-weight: 700;
+                        }
+                        
+                        .flex__item {
+                            height: 100vh;
+                            color: #fff;
+                            transition: transform 0.1s linear;
+                        }
+                        
+                        .flex__item--left {
+                            display: flex;
+                            display: -webkit-flex;
+                            display: -moz-flex;
+                            display: -ms-flex;
+                            align-items: center;
+                            -webkit-align-items: center;
+                            -moz-align-items: center;
+                            -ms-align-items: center;
+                            width: 65%;
+                            transform-origin: left bottom;
+                            transition: transform 0.1s linear 0.4s;
+                            opacity: 0;
+                            position: relative;
+                            overflow: hidden;
+                        }
+                        
+                        .flex__item--right {
+                            width: 35%;
+                            transform-origin: right center;
+                            transition: transform 0.1s linear 0s;
+                            opacity: 0;
+                        }
+                        
+                        .flex--preStart .flex__item--left,
+                        .flex--preStart .flex__item--right,
+                        .flex--active .flex__item--left,
+                        .flex--active .flex__item--right {
+                            opacity: 1;
+                        }
+                        /* janaina */
+                        
+                        .flex--pikachu .flex__item--left {
+                            background: #A3519B;
+                        }
+                        
+                        .flex--pikachu .flex__item--right {
+                            background: #ffc8f9;
+                        }
+                        
+                        .flex__content {
+                            margin-left: 80px;
+                            width: 55%;
+                            opacity: 1;
+                            transform: translate3d(0, 0, 0);
+                            transition: transform 0.2s linear 0.2s, opacity 0.1s linear 0.2s;
+                        }
+                        /* Animate-START point */
+                        
+                        .flex__container.animate--start .flex__content {
+                            transform: translate3d(0, -200%, 0);
+                            opacity: 0;
+                        }
+                        
+                        .flex__container.animate--start .pokemon__img {
+                            transform: translate3d(-200px, 0, 0);
+                            opacity: 0;
+                        }
+                        /* Animate-END point */
+                        
+                        .flex__container.animate--end .flex__item--left {
+                            transform: scaleY(0);
+                        }
+                        
+                        .flex__container.animate--end .flex__item--right {
+                            transform: scaleX(0);
+                        }
+                        
+                        .flex__container.animate--end .flex__content {
+                            transform: translate3d(0, 200%, 0);
+                            opacity: 0;
+                        }
+                        
+                        .flex__container.animate--end .pokemon__img {
+                            transform: translate3d(200px, 0, 0);
+                            opacity: 0;
+                        }
+                        /*=============== VARIABLES CSS ===============*/
+                        
+                         :root {
+                            /*========== Colors ==========*/
+                            --hue-color: 240;
+                            --title-color: hsl(var(--hue-color), 53%, 15%);
+                            --text-color: hsl(var(--hue-color), 12%, 35%);
+                            --text-color-light: hsl(var(--hue-color), 12%, 65%);
+                            --white-color: #FFF;
+                            --body-color: hsl(var(--hue-color), 24%, 94%);
+                            /*========== Font and typography ==========*/
+                            --body-font: 'Poppins', sans-serif;
+                            --biggest-font-size: 3rem;
+                            --small-font-size: .813rem;
+                            --smaller-font-size: .75rem;
+                            --tiny-font-size: .625rem;
+                            /*========== Font weight ==========*/
+                            --font-medium: 500;
+                            /*========== Margenes Bottom ==========*/
+                            --mb-0-25: .25rem;
+                            --mb-1: 1rem;
+                            --mb-1-5: 1.5rem;
+                            --mb-2-5: 2.5rem;
+                            /*========== z index ==========*/
+                            --z-normal: 1;
+                            --z-tooltip: 10;
+                        }
+                        
+                        @media screen and (min-width: 968px) {
+                             :root {
+                                --biggest-font-size: 3.5rem;
+                                --small-font-size: .875rem;
+                                --smaller-font-size: .813rem;
+                                --tiny-font-size: .75rem;
+                            }
+                        }
+                        /*========== Variables Dark theme ==========*/
+                        
+                        body.dark-theme {
+                            --title-color: hsl(var(--hue-color), 12%, 95%);
+                            --text-color: hsl(var(--hue-color), 12%, 75%);
+                            --body-color: hsl(var(--hue-color), 10%, 16%);
+                        }
+                        /*========== Button Dark/Light ==========*/
+                        
+                        .clock__theme {
+                            position: absolute;
+                            top: -1rem;
+                            right: -1rem;
+                            display: flex;
+                            padding: .25rem;
+                            border-radius: 50%;
+                            box-shadow: inset -1px -1px 1px hsla(var(--hue-color), 0%, 100%, 1), inset 1px 1px 1px hsla(var(--hue-color), 30%, 86%, 1);
+                            color: var(--first-color);
+                            cursor: pointer;
+                        }
+                        /*========== Box shadow Dark theme ==========*/
+                        
+                        .dark-theme .clock__circle {
+                            box-shadow: 6px 6px 16px hsla(var(--hue-color), 8%, 12%, 1), -6px -6px 16px hsla(var(--hue-color), 8%, 20%, 1), inset -6px -6px 16px hsla(var(--hue-color), 8%, 20%, 1), inset 6px 6px 12px hsla(var(--hue-color), 8%, 12%, 1);
+                        }
+                        
+                        .dark-theme .clock__theme {
+                            box-shadow: inset -1px -1px 1px hsla(var(--hue-color), 8%, 20%, 1), inset 1px 1px 1px hsla(var(--hue-color), 8%, 12%, 1);
+                        }
+                        /*=============== BASE ===============*/
+                        
+                        * {
+                            box-sizing: border-box;
+                            padding: 0;
+                            margin: 0;
+                        }
+                        
+                        body {
+                            margin: 0;
+                            font-family: var(--body-font);
+                            background-color: var(--body-color);
+                            color: var(--text-color);
+                        }
+                        
+                        a {
+                            text-decoration: none;
+                        }
+                        /*=============== REUSABLE CSS CLASSES ===============*/
+                        
+                        .container {
+                            max-width: 968px;
+                            margin-left: var(--mb-1);
+                            margin-right: var(--mb-1);
+                        }
+                        
+                        .grid {
+                            display: grid;
+                        }
+                        /*=============== CLOCK ===============*/
+                        
+                        .clock__container {
+                            height: 100vh;
+                            grid-template-rows: 1fr max-content;
+                        }
+                        
+                        .clock__circle {
+                            position: relative;
+                            width: 200px;
+                            height: 200px;
+                            box-shadow: -6px -6px 16px var(--white-color), 6px 6px 16px hsla(var(--hue-color), 30%, 86%, 1), inset 6px 6px 16px hsla(var(--hue-color), 30%, 86%, 1), inset -6px -6px 16px var(--white-color);
+                            border-radius: 50%;
+                            justify-self: center;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                        }
+                        
+                        .clock__content {
+                            align-self: center;
+                            row-gap: 3.5rem;
+                        }
+                        
+                        .clock__twelve,
+                        .clock__three,
+                        .clock__six,
+                        .clock__nine {
+                            position: absolute;
+                            width: 1rem;
+                            height: 1px;
+                            background-color: var(--text-color-light);
+                        }
+                        
+                        .clock__twelve,
+                        .clock__six {
+                            transform: translateX(-50%) rotate(90deg);
+                        }
+                        
+                        .clock__twelve {
+                            top: 1.25rem;
+                            left: 50%;
+                        }
+                        
+                        .clock__three {
+                            top: 50%;
+                            right: .75rem;
+                        }
+                        
+                        .clock__six {
+                            bottom: 1.25rem;
+                            left: 50%;
+                        }
+                        
+                        .clock__nine {
+                            left: .75rem;
+                            top: 50%;
+                        }
+                        
+                        .clock__rounder {
+                            width: .75rem;
+                            height: .75rem;
+                            background-color: var(--first-color);
+                            border-radius: 50%;
+                            border: 2px solid var(--body-color);
+                            z-index: var(--z-tooltip);
+                        }
+                        
+                        .clock__hour,
+                        .clock__minutes,
+                        .clock__seconds {
+                            position: absolute;
+                            display: flex;
+                            justify-content: center;
+                        }
+                        
+                        .clock__hour {
+                            width: 105px;
+                            height: 105px;
+                        }
+                        
+                        .clock__hour::before {
+                            content: '';
+                            position: absolute;
+                            background-color: var(--text-color);
+                            width: .25rem;
+                            height: 3rem;
+                            border-radius: .75rem;
+                            z-index: var(--z-normal);
+                        }
+                        
+                        .clock__minutes {
+                            width: 136px;
+                            height: 136px;
+                        }
+                        
+                        .clock__minutes::before {
+                            content: '';
+                            position: absolute;
+                            background-color: var(--text-color);
+                            width: .25rem;
+                            height: 4rem;
+                            border-radius: .75rem;
+                            z-index: var(--z-normal);
+                        }
+                        
+                        .clock__seconds {
+                            width: 130px;
+                            height: 130px;
+                        }
+                        
+                        .clock__seconds::before {
+                            content: '';
+                            position: absolute;
+                            background-color: var(--first-color);
+                            width: .125rem;
+                            height: 5rem;
+                            border-radius: .75rem;
+                            z-index: var(--z-normal);
+                        }
+                        
+                        .clock__logo {
+                            width: max-content;
+                            justify-self: center;
+                            margin-bottom: var(--mb-2-5);
+                            font-size: var(--smaller-font-size);
+                            font-weight: var(--font-medium);
+                            color: var(--text-color-light);
+                            transition: .3s;
+                        }
+                        
+                        .clock__logo:hover {
+                            color: var(--first-color);
+                        }
+                        
+                        .clock__text {
+                            display: flex;
+                            justify-content: center;
+                        }
+                        
+                        .clock__text-hour,
+                        .clock__text-minutes {
+                            font-size: var(--biggest-font-size);
+                            font-weight: var(--font-medium);
+                            color: var(--title-color);
+                        }
+                        
+                        .clock__text-ampm {
+                            font-size: var(--tiny-font-size);
+                            color: var(--title-color);
+                            font-weight: var(--font-medium);
+                            margin-left: var(--mb-0-25);
+                        }
+                        
+                        .clock__date {
+                            text-align: center;
+                            font-size: var(--small-font-size);
+                            font-weight: var(--font-medium);
+                        }
+                        /*=============== MEDIA QUERIES ===============*/
+                        /* For large devices */
+                        
+                        @media screen and (min-width: 968px) {
+                            .container {
+                                margin-left: auto;
+                                margin-right: auto;
+                            }
+                            .clock__logo {
+                                margin-bottom: 3rem;
+                            }
+                        }
